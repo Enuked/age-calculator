@@ -1,0 +1,58 @@
+---
+import arrow from "../../public/assets/images/icon-arrow.svg";
+
+interface Props {
+  day: string;
+  month: string;
+  year: string;
+}
+
+const { day, month, year } = Astro.props;
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <main>
+      <article class="article">
+        <div class="text-fields">
+          <p class="label day-label">DAY</p>
+          <input type="text" id="dayInput" placeholder="DD" value={day} />
+          <span id="dayError" class="error"></span>
+        </div>
+        <div class="text-fields">
+          <p class="label month-label">MONTH</p>
+          <input type="text" id="monthInput" placeholder="MM" value={month} />
+          <span id="monthError" class="error"></span>
+        </div>
+        <div class="text-fields">
+          <p class="label year-label">YEAR</p>
+          <input type="text" id="yearInput" placeholder="YYYY" value={year} />
+          <span id="yearError" class="error"></span>
+        </div>
+      </article>
+
+      <div class="img-container">
+        <div class="line"></div>
+        <img src={arrow.src} alt="Arrow" />
+      </div>
+      <div class="dmy">
+        <p><span id="yearsSince">--</span>years</p>
+        <p><span id="monthsSince">--</span>months</p>
+        <p><span id="daysSince">--</span>days</p>
+      </div>
+    </main>
+    <script src="../components/calculate.js"></script>
+  </body>
+</html>
+
+<style lang="scss">
+  @import "../style/layout.scss";
+  @import "../style/global.scss";
+</style>

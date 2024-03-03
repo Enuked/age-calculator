@@ -1,0 +1,32 @@
+$Purple: hsl(259, 100%, 65%);
+$Light: hsl(0, 100%, 67%);
+
+$White: hsl(0, 0%, 100%);
+$Off-white: hsl(0, 0%, 94%);
+$Light-grey: hsl(0, 0%, 86%);
+$Smokey-grey: hsl(0, 1%, 44%);
+$Off-black: hsl(0, 0%, 8%);
+
+$font-family: "Poppins", sans-serif;
+$font-weight1: 400;
+$font-weight2: 700;
+$font-weight3: 800;
+$font-style: normal;
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  margin: 10px;
+}
+
+p {
+  font-family: $font-family;
+}
